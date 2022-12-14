@@ -1,0 +1,39 @@
+﻿@page
+@using MovieApi.Data.Entities;
+@model dotnet_movie_api_client.Pages.personPage.listModel
+@{
+    ViewData["Title"] = "Person List";
+}
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+
+
+    <br />
+    <h2>List of Persons</h2>
+    <table class="person-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Place of Birth</th>
+                <th>Birthday</th>
+            </tr>
+        </thead>,
+        <tbody>
+
+            @foreach (Person p in Model.persons)
+            {
+                <tr>
+                    <td>@p.Name</td>
+                    <td>@p.PlaceOfBirth</td>
+                    <td>@p.Birthday</td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" href="detail?id=@p.Id">Detail</a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+
+</div>

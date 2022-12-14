@@ -1,0 +1,39 @@
+﻿@page
+@using MovieApi.Data.Entities;
+@model dotnet_movie_api_client.Pages.moviePage.listModel
+@{
+    ViewData["Title"] = "Movie List";
+}
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+
+
+    <br />
+    <h2>List of Movies</h2>
+    <table class="movie-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Place of Birth</th>
+                <th>Birthday</th>
+            </tr>
+        </thead>,
+        <tbody>
+
+            @foreach (Movie mv in Model.movies)
+            {
+                    <tr>
+                        <td>@mv.Title</td>
+                        <td>@mv.VoteAverage</td>
+                        <td>@mv.ReleaseDate</td>
+                        <td>
+                            <a class="btn btn-primary btn-sm" href="detail?id=@mv.Id">Detail</a>
+                        </td>
+                    </tr>
+            }
+
+        </tbody>
+
+    </table>
+
+</div>

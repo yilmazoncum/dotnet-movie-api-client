@@ -1,0 +1,33 @@
+﻿@page
+@using MovieApi.Data.Entities;
+@model dotnet_movie_api_client.Pages.personPage.filmographyModel
+@{
+    ViewData["Title"] = "Filmography";
+}
+<div class="text-center">
+    <h1 class="display-4">Cast of @Model.personName</h1>
+
+
+    <br />
+    <table class="cast-table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Character</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (Filmography f in Model.filmos)
+            {
+                    <tr>
+                        <td>@f.Title</td>
+                        <td>@f.Character</td>                    
+                    </tr>
+            }
+
+        </tbody>
+
+    </table>
+
+</div>

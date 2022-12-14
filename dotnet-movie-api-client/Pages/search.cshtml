@@ -1,0 +1,33 @@
+﻿@page
+@model dotnet_movie_api_client.Pages.searchModel
+@{
+}
+<form asp-action="SearchMovie" method="post">
+        <table>
+            <tr>
+                <td>Search Movie: </td>
+                <td><input type="text" name="txtMovie"/></td>
+            </tr>
+        <tr>
+            <td></td>
+            <td><button>Submit</button></td>
+        </tr>
+
+
+            
+        </table>
+        <hr/>
+    </form>
+
+<form asp-action="SearchPerson" method="post">
+        <table>
+        <tr>
+            <td>Search Person: </td>
+            <td><input type="text" id="txtPerson" name="txtPerson" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" name="txtPerson" value="           " asp-page-handler="SubmitPerson" /></td>
+        </tr>
+        </table>
+    </form>

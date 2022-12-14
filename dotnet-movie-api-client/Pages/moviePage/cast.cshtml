@@ -1,0 +1,35 @@
+﻿@page
+@using MovieApi.Data.Entities;
+@model dotnet_movie_api_client.Pages.moviePage.castModel
+@{
+    ViewData["Title"] = "Cast";
+}
+<div class="text-center">
+    <h1 class="display-4">Cast of @Model.movieName</h1>
+
+
+    <br />
+    <table class="cast-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>KnownForDepartment</th>
+                <th>Character</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (Cast c in Model.casts)
+            {
+                <tr>
+                    <td>@c.Name</td>
+                    <td>@c.KnownForDepartment</td>
+                    <td>@c.Character</td>                    
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+
+</div>

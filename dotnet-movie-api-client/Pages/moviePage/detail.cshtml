@@ -1,0 +1,48 @@
+﻿@page
+@model dotnet_movie_api_client.Pages.moviePage.detailModel
+@{
+    ViewData["Title"] = "Movie Detail";
+}
+<div class="text-center">
+    <h1 class="display-4">@Model.movie.Title</h1>
+
+    <br />
+    <table class="movie-detail-table">
+        
+        <tbody>
+            <tr>
+                <th>Title</th>
+                <th>@Model.movie.Title</th>
+            </tr>
+            <tr>
+                <th>Vote Average</th>
+                <th>@Model.movie.VoteAverage</th>
+            </tr>
+            <tr>
+                <th>Release Date</th>
+                <th>@Model.movie.ReleaseDate</th>
+            </tr>
+            <tr>
+                <th>Overview</th>
+                <th>@Model.movie.Overview</th>
+            </tr>
+            <tr>
+                <th>Budget</th>
+                <th>@Model.movie.Budget</th>
+            </tr>
+            <tr>
+                <th>Revenue</th>
+                <th>@Model.movie.Revenue</th>
+            </tr>
+            <tr>
+                <th>Runtime</th>
+                <th>@Model.movie.Runtime</th>
+            </tr>
+        
+        </tbody>
+        <td>
+            <a class="btn btn-primary btn-sm" href="cast?id=@Model.movie.Id&name=@Model.movie.Title">Movie Cast</a>
+        </td>
+    </table>
+
+</div>

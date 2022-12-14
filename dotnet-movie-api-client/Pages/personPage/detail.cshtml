@@ -1,0 +1,41 @@
+﻿@page
+@model dotnet_movie_api_client.Pages.personPage.detailModel
+@{
+    ViewData["Title"] = "Person Detail";
+}
+<div class="text-center">
+    <h1 class="display-4">@Model.person.Name</h1>
+
+    <br />
+    <table class="movie-detail-table">
+
+        <tbody>
+            <tr>
+                <th>Name</th>
+                <th>@Model.person.Name</th>
+            </tr>
+            <tr>
+                <th>Birthday</th>
+                <th>@Model.person.Birthday</th>
+            </tr>
+            <tr>
+                <th>Deathday</th>
+                <th>@Model.person.Deathday</th>
+            </tr>
+            <tr>
+                <th>Known For Department</th>
+                <th>@Model.person.KnownForDepartment</th>
+            </tr>
+            <tr>
+                <th>Place Of Birth</th>
+                <th>@Model.person.PlaceOfBirth</th>
+            </tr>
+
+
+        </tbody>
+        <td>
+            <a class="btn btn-primary btn-sm" href="filmography?id=@Model.person.Id&name=@Model.person.Name">Person Filmography</a>
+        </td>
+    </table>
+
+</div>
